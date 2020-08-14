@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar color="success">
+    <ion-title>Login Ionic Farma</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-list>
+  <ion-item>
+    <ion-input type="text" placeholder="Email" [(ngModel)]="email_addres"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input type="password" placeholder="Password" [(ngModel)]="password"></ion-input>
+  </ion-item>
+  <ion-button expand="full" class="no-padding" color="success" (click)="TryLogin()">Iniciar Sesion</ion-button>
+  <p class="ion-padding info-1" >
+    Si no tiene una cuenta , creela  <span  (click)="openRegister()">Registrarse</span>
+  </p>
+</ion-list>
+</ion-content>
