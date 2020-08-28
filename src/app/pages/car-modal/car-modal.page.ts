@@ -18,6 +18,7 @@ export class CarModalPage implements OnInit {
   ngOnInit() {
     this.cart= this.cartService.getCart();
   }
+   
   decreaseCartItem(product){
     this.cartService.decreaseProduct(product);
   }
