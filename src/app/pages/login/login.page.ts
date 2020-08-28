@@ -10,7 +10,7 @@ import{ Storage} from  '@ionic/storage';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
-  email_addres :string="";
+  email :string="";
   password:string="";
   
    disabledButton;
@@ -31,7 +31,7 @@ export class LoginPage implements OnInit {
  
   async TryLogin(){
    
-     if(this.email_addres=="") {
+     if(this.email=="") {
      this.presentToast('Su Email es requerido');
     } else if(this.password=="") {
      this.presentToast('Su contraseña es requerido');
@@ -46,7 +46,7 @@ export class LoginPage implements OnInit {
      
         let body ={
           aski: 'proses_login',
-          email_addres:this.email_addres,
+          email:this.email,
           password :this.password
         }
         this.acesPrvds.postData(body,'proses_api.php').subscribe((res:any)=>{

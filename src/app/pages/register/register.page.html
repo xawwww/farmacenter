@@ -12,21 +12,17 @@
     <ion-item>
       <ion-input type="text" placeholder="Nombre" [(ngModel)]="nombre"></ion-input>
     </ion-item>
-    <ion-item> 
-      <ion-label style="color:#999">Genero</ion-label>
-      <ion-select interface="popover" [(ngModel)]="gender" >
-        <ion-select-option value="f">Female</ion-select-option>
-        <ion-select-option value="m">Male</ion-select-option>
-      </ion-select>
+
+    <ion-item>
+      <ion-input type="text" placeholder="Cedula" [(ngModel)]="cedula"></ion-input>
     </ion-item>
 
     <ion-item>
-      <ion-label >Fecha de Nacimiento</ion-label>
-      <ion-datetime displayFormat="MM/DD/YYYY" min="1984-03-14" max="2008-12-09" [(ngModel)]="fechanacimiento" ></ion-datetime>
+      <ion-input type="text" placeholder="Telefono" [(ngModel)]="telefono"></ion-input>
     </ion-item>
 
     <ion-item>
-      <ion-input type="text" placeholder="Email" [(ngModel)]="email_addres"></ion-input>
+      <ion-input type="text" placeholder="Email" [(ngModel)]="email"></ion-input>
     </ion-item>
    
     <ion-item>

@@ -10,13 +10,13 @@ import {AccessProviders} from '../../providers/access-providers';
 })
 export class RegisterPage implements OnInit {
   nombre :string ="";
-  gender :string ="";
-  fechanacimiento:string="";
-  email_addres :string="";
+  cedula :string ="";
+  telefono:string="";
+  email :string="";
   password:string="";
   confirmpassword:string="";
   disabledButton;
-  
+    
 
   constructor ( private  router: Router,
     private  toastCtrl: ToastController,
@@ -26,7 +26,7 @@ export class RegisterPage implements OnInit {
     ) { }
 
   ngOnInit() {
-  }
+  } 
 
  ionViewDidEnter(){
    this.disabledButton=false;
@@ -36,11 +36,11 @@ export class RegisterPage implements OnInit {
    if(this.nombre==""){
      this.presentToast('Su nombre es requerido');
 
-   } else if(this.gender=="") {
-    this.presentToast('Su genero es requerido');
-   } else if(this.fechanacimiento=="") {
-    this.presentToast('Su fechanacimiento es requerido');
-   } else if(this.email_addres=="") {
+   } else if(this.cedula=="") {
+    this.presentToast('Su cedula es requerido');
+   } else if(this.telefono=="") {
+    this.presentToast('Su telefono es requerido');
+   } else if(this.email=="") {
     this.presentToast('Su email es requerido');
    
    } else if(this.password=="") {
@@ -58,9 +58,9 @@ export class RegisterPage implements OnInit {
        let body ={
          aski: 'proses_register',
          nombre:this.nombre,
-         gender: this.gender,
-         fechanacimiento: this.fechanacimiento,
-         email_addres:this.email_addres,
+         cedula: this.cedula,
+         telefono: this.telefono,
+         email:this.email, 
          password :this.password
        }
        this.acesPrvds.postData(body,'proses_api.php').subscribe((res:any)=>{

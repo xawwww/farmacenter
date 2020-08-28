@@ -4,7 +4,7 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/timeout';
 @Injectable()
 export class AccessProviders{
-    server : string = 'http://localhost/Jona/Api/';
+    server : string = 'http://localhost/api/';
 
     constructor(
         public http:HttpClient
@@ -18,7 +18,7 @@ export class AccessProviders{
             headers: headers
         }
         return this.http.post(this.server + file, JSON.stringify(body),options )
-        .timeout(22000)
+        .timeout(42000)
         .map(res=> res);
     }
     }
