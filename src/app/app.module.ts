@@ -11,6 +11,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { IonicStorageModule } from '@ionic/storage';
 import {HttpClientModule } from '@angular/common/http';
 import {AccessProviders} from './providers/access-providers';
+import { CarModalPageRoutingModule } from './pages/car-modal/car-modal-routing.module';
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -18,7 +19,7 @@ import {AccessProviders} from './providers/access-providers';
      IonicModule.forRoot(),
       AppRoutingModule,
        IonicStorageModule.forRoot(),
-       HttpClientModule],
+       HttpClientModule, CarModalPageRoutingModule],
   providers: [
     StatusBar,
     SplashScreen,

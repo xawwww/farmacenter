@@ -28,6 +28,10 @@ const routes: Routes = [
     path: 'crud/:id',
     loadChildren: () => import('./pages/crud/crud.module').then( m => m.CrudPageModule)
   },
+  {
+    path: 'car-modal',
+    loadChildren: () => import('./pages/car-modal/car-modal.module').then( m => m.CarModalPageModule)
+  },
 ];
 
 @NgModule({

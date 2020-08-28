@@ -13,8 +13,7 @@
 
 <ion-content>
   <ion-fab vertical="top" horizontal="end" slot="fixed">
-    <ion-fab-button   (click)="openCart()" #cart>
-      <div class="cart-length">{{cartItemCount | async}}</div>
+    <ion-fab-button   (click)="abrirCarrito()" #cart>
       <ion-icon name="cart" class="cart-icon"></ion-icon>
     </ion-fab-button>
   </ion-fab >
@@ -22,14 +21,14 @@
   <ion-list>
     <ion-card *ngFor="let p of products">
       <ion-card-header>
-        <ion-card-title>{{p.name}}
+        <ion-card-title>{{p.nombre}}
 
         </ion-card-title>
       </ion-card-header>
       <ion-card-content>
         <ion-row class="ion-align-items-center">
-          <ion-col size="8"><ion-label color="secondary"><b>{{p.price | currency:'USD'}}</b></ion-label></ion-col>
-          <ion-col size="4" class="ion-text-right"><ion-button fill="clear" (click)="addToCart(p)"><ion-icon name="add"></ion-icon></ion-button></ion-col>
+          <ion-col size="8"><ion-label color="secondary"><b>{{p.precio | currency:'USD'}}</b></ion-label></ion-col>
+          <ion-col size="4" class="ion-text-right"><ion-button fill="clear" (click)="anadirCarro(p)"><ion-icon name="add"></ion-icon></ion-button></ion-col>
         </ion-row>
       </ion-card-content>
     </ion-card>

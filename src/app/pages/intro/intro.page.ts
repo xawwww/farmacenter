@@ -12,9 +12,14 @@ export class IntroPage implements OnInit {
 
   constructor( private router:Router) { }
 
+
   ngOnInit() {
   }
 
+  abrirCarrito(){
+    console.log('Abrir el carrito')
+  }
+  
   openLogin(){
     this.router.navigate(['/login']);
 
